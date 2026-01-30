@@ -109,7 +109,7 @@ const PORTFOLIO_DATA = {
       title: "Wavelength",
       description: "Experiência web focada em estrutura HTML semântica e acessibilidade, explorando layouts fluídos.",
       tags: ["HTML"],
-      category: "Experimental",
+      category: "Web Apps & Jogos",
       links: { repo: "https://github.com/Luziferri/wavelength", demo: "https://luziferri.github.io/wavelength" },
       featured: false,
       icon: Activity
