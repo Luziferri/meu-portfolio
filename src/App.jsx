@@ -67,7 +67,7 @@ const PORTFOLIO_DATA = {
       description: "Coleção de plugins e temas personalizados para o BetterDiscord. Melhora a experiência do utilizador com funcionalidades extra e estilos visuais únicos.",
       tags: ["JavaScript", "CSS"],
       category: "Ferramentas & Plugins",
-      links: { demo: "https://github.com/Luziferri/BetterDiscordStuff", repo: "https://github.com/Luziferri/BetterDiscordStuff" },
+      links: { repo: "https://github.com/Luziferri/BetterDiscordStuff", demo: "https://github.com/Luziferri/BetterDiscordStuff" },
       featured: true, 
       icon: Palette
     },
@@ -77,7 +77,7 @@ const PORTFOLIO_DATA = {
       description: "Um template de interface web que simula uma linha de comandos (Command Line Interface). Design minimalista e puramente focado em CSS/HTML.",
       tags: ["CSS", "HTML"],
       category: "Design & UI Kits",
-      links: { demo: "https://github.com/Luziferri/CMD", repo: "https://luziferri.github.io/CMD/" },
+      links: { repo: "https://github.com/Luziferri/CMD", demo: "https://luziferri.github.io/CMD/" },
       featured: false,
       icon: Terminal
     },
@@ -87,7 +87,7 @@ const PORTFOLIO_DATA = {
       description: "Aplicação web interativa do clássico jogo social. Lógica implementada em JavaScript puro para garantir leveza e rapidez.",
       tags: ["HTML", "JavaScript"],
       category: "Web Apps & Jogos",
-      links: { demo: "https://github.com/Luziferri/VerdadeConsequencia", repo: " https://luziferri.github.io/VerdadeConsequencia/" },
+      links: { repo: "https://github.com/Luziferri/VerdadeConsequencia", demo: " https://luziferri.github.io/VerdadeConsequencia/" },
       featured: false,
       icon: Gamepad2
     },
@@ -99,7 +99,7 @@ const PORTFOLIO_DATA = {
       descCipher: "R2VzdMOjbyBjb21wbGV0YSBkZSBjYXTrbG9nby4=",
       tags: ["ENCRYPTED"],
       category: "Web Apps & Jogos",
-      links: { demo: "https://github.com/Luziferri/Biblioteca", repo: "https://luziferri.github.io/Biblioteca" },
+      links: { repo: "https://github.com/Luziferri/Biblioteca", demo: "https://luziferri.github.io/Biblioteca" },
       featured: true,
       icon: Book,
       locked: true
@@ -110,7 +110,7 @@ const PORTFOLIO_DATA = {
       description: "Experiência web focada em estrutura HTML semântica e acessibilidade, explorando layouts fluídos.",
       tags: ["HTML"],
       category: "Experimental",
-      links: { demo: "https://github.com/Luziferri/wavelength", repo: "https://luziferri.github.io/wavelength" },
+      links: { repo: "https://github.com/Luziferri/wavelength", demo: "https://luziferri.github.io/wavelength" },
       featured: false,
       icon: Activity
     },
@@ -120,7 +120,7 @@ const PORTFOLIO_DATA = {
       description: "Página de aterragem (Landing Page) desenvolvida para sistemas de onboarding digital, com foco em clareza visual.",
       tags: ["HTML"],
       category: "Design & UI Kits",
-      links: { demo: "https://github.com/Luziferri/acolhimento", repo: "https://luziferri.github.io/acolhimento" },
+      links: { repo: "https://github.com/Luziferri/acolhimento", demo: "https://luziferri.github.io/acolhimento" },
       featured: false,
       icon: Home
     },
@@ -130,7 +130,7 @@ const PORTFOLIO_DATA = {
       description: "Sistema de classificação e ranking. Uma implementação limpa focada na hierarquia de dados.",
       tags: ["HTML"],
       category: "Web Apps & Jogos",
-      links: { demo: "https://github.com/Luziferri/WC-Rank", repo: "https://luziferri.github.io/WC-Rank" },
+      links: { repo: "https://github.com/Luziferri/WC-Rank", demo: "https://luziferri.github.io/WC-Rank" },
       featured: false,
       icon: Trophy
     },
@@ -142,7 +142,7 @@ const PORTFOLIO_DATA = {
       descCipher: "TWFuaXB1bGHDp8OjbyBkZSBEYXRhcw==",
       tags: ["ENCRYPTED"],
       category: "Experimental",
-      links: { demo: "https://github.com/Luziferri/date", repo: "https://luziferri.github.io/date" },
+      links: { repo: "https://github.com/Luziferri/date", demo: "https://luziferri.github.io/date" },
       featured: false,
       icon: Calendar,
       locked: true
@@ -153,7 +153,7 @@ const PORTFOLIO_DATA = {
       description: "Versão anterior do portfólio pessoal. Mantido como arquivo da evolução estilística e técnica.",
       tags: ["HTML", "Open Source"],
       category: "Arquivo",
-      links: { demo: "https://github.com/Luziferri/portfolio", repo: "https://luziferri.github.io/portfolio" },
+      links: { repo: "https://github.com/Luziferri/portfolio", demo: "https://luziferri.github.io/portfolio" },
       featured: false,
       icon: Layout
     },
@@ -163,7 +163,7 @@ const PORTFOLIO_DATA = {
       description: "Espaço visual para organização de inspirações, paletas de cores e referências de design. Uma ferramenta essencial para o processo criativo.",
       tags: ["React", "Tailwind"],
       category: "Design & UI Kits",
-      links: { demo: "https://github.com/Luziferri/moodboard", repo: "https://luziferri.github.io/moodboard" },
+      links: { demo: "https://moodboard-six.vercel.app/", repo: "https://moodboard-six.vercel.app/" },
       featured: false,
       icon: Sparkles
     }
