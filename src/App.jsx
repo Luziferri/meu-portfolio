@@ -3,36 +3,32 @@ import { motion, useMotionTemplate, useMotionValue, AnimatePresence } from 'fram
 import { Github, Linkedin, Mail, ExternalLink, Code2, Terminal, ArrowRight, Layers, Sparkles, MapPin, Book, Gamepad2, Palette, Activity, Home, Trophy, Calendar, Layout, ArrowLeft, Filter, Lock, ShieldAlert, Unlock, X, EyeOff } from 'lucide-react';
 
 /* =============================================================================
-  🔐 CRYPTO ENGINE (SIMPLIFIED CAESAR SHIFT - ROBUST)
+  🔐 CRYPTO ENGINE (STANDARD BASE64 - 100% FIÁVEL)
   =============================================================================
 */
 
 const CryptoUtils = {
-  // Desencripta movendo os caracteres para trás (-1 char code)
-  decrypt: (encryptedText) => {
-    if (!encryptedText) return "";
+  // Desencripta Base64 Standard (Suporta acentos corretamente)
+  decrypt: (encodedText) => {
     try {
-      return encryptedText.split('').map(char => String.fromCharCode(char.charCodeAt(0) - 1)).join('');
+      if (!encodedText) return "";
+      // Decodifica Base64 garantindo suporte a UTF-8 (acentos)
+      return decodeURIComponent(escape(atob(encodedText)));
     } catch (e) {
-      return "ERRO DE LEITURA";
+      return "ERRO DE DADOS"; 
     }
   },
   
-  // Encripta movendo os caracteres para a frente (+1 char code)
-  encrypt: (text) => {
-    return text.split('').map(char => String.fromCharCode(char.charCodeAt(0) + 1)).join('');
-  },
-
   // Validação da Password
   verifyHash: (input) => {
-    const normalized = input.toLowerCase().trim();
-    // Verifica diretamente a nova password
-    return normalized === "atumentalado";
+    // Verifica a password exata
+    return input.trim() === "atumentalado";
   }
 };
 
 /* =============================================================================
   ⚡ CONFIGURAÇÃO DE DADOS
+  Nota: Os códigos abaixo são Base64 dos textos originais.
   =============================================================================
 */
 
@@ -97,11 +93,10 @@ const PORTFOLIO_DATA = {
     },
     {
       id: 4,
-      // Dados encriptados (Shift +1)
-      // Original: "Sistema de Biblioteca"
-      titleCipher: "Tjtuenb!ef!Cjcmjpufdb",
-      // Original: "Gestão completa de catálogo."
-      descCipher: "Hftuão!dpnqmfub!ef!dbuàmphp/",
+      // Texto Original: "Sistema de Biblioteca" -> Base64
+      titleCipher: "U2lzdGVtYSBkZSBCaWJsaW90ZWNh",
+      // Texto Original: "Gestão completa de catálogo." -> Base64
+      descCipher: "R2VzdMOjbyBjb21wbGV0YSBkZSBjYXTrbG9nby4=",
       tags: ["ENCRYPTED"],
       category: "Web Apps & Jogos",
       links: { demo: "https://github.com/Luziferri/Biblioteca", repo: "https://github.com/Luziferri/Biblioteca" },
@@ -141,11 +136,10 @@ const PORTFOLIO_DATA = {
     },
     {
       id: 8,
-      // Dados encriptados (Shift +1)
-      // Original: "Date Utility"
-      titleCipher: "Ebuf!Vujmjuz",
-      // Original: "Manipulação de Datas"
-      descCipher: "Nbojqvmbçáo!ef!Ebubt",
+      // Texto Original: "Date Utility" -> Base64
+      titleCipher: "RGF0ZSBVdGlsaXR5",
+      // Texto Original: "Manipulação de Datas" -> Base64
+      descCipher: "TWFuaXB1bGHDp8OjbyBkZSBEYXRhcw==",
       tags: ["ENCRYPTED"],
       category: "Experimental",
       links: { demo: "https://github.com/Luziferri/date", repo: "https://github.com/Luziferri/date" },
@@ -348,7 +342,7 @@ const SpotlightCard = ({ children, className = "", featured = false, locked = fa
         }}
       />
       
-      {/* LOCKED OVERLAY - CLIQUE EM QUALQUER LUGAR */}
+      {/* LOCKED OVERLAY */}
       {locked && (
         <div 
           onClick={onUnlock} 
@@ -806,18 +800,8 @@ const HomePage = ({ onViewChange, unlockedProjects, onUnlockRequest, sessionKey 
 export default function App() {
   const [view, setView] = useState('home'); // 'home' or 'projects'
   const [unlockedProjects, setUnlockedProjects] = useState([]);
-  const [sessionKey, setSessionKey] = useState(null); // Armazena a password válida da sessão
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [pendingUnlockId, setPendingUnlockId] = useState(null);
-
-  // Initial console message for developer
-  useEffect(() => {
-    console.log("%c🔐 FERRAMENTA DE ENCRIPTAÇÃO ATIVA", "color: #ef4444; font-size: 20px; font-weight: bold;");
-    console.log("Para gerar novos códigos encriptados, use o comando abaixo na consola:");
-    console.log('CryptoUtils.encrypt("Seu Texto Aqui")');
-    // Exposing to window for dev usage
-    window.CryptoUtils = CryptoUtils;
-  }, []);
 
   // Scroll to top when view changes
   useEffect(() => {
@@ -831,9 +815,6 @@ export default function App() {
   };
 
   const handleUnlockSuccess = () => {
-    // Agora não precisamos da chave para desencriptar, apenas desbloqueamos
-    setSessionKey("admin"); // Chave dummy
-    
     if (pendingUnlockId) {
       setUnlockedProjects(prev => [...prev, pendingUnlockId]);
       // Desbloqueia automaticamente outros projetos se a chave for a mesma (UX)
@@ -871,7 +852,6 @@ export default function App() {
                 onViewChange={setView} 
                 unlockedProjects={unlockedProjects}
                 onUnlockRequest={handleUnlockRequest}
-                sessionKey={sessionKey}
               />
             </motion.div>
           ) : (
@@ -886,7 +866,6 @@ export default function App() {
                 onViewChange={setView}
                 unlockedProjects={unlockedProjects}
                 onUnlockRequest={handleUnlockRequest}
-                sessionKey={sessionKey}
               />
             </motion.div>
           )}
