@@ -77,7 +77,7 @@ const PORTFOLIO_DATA = {
       description: "Um template de interface web que simula uma linha de comandos (Command Line Interface). Design minimalista e puramente focado em CSS/HTML.",
       tags: ["CSS", "HTML"],
       category: "Design & UI Kits",
-      links: { demo: "https://github.com/Luziferri/CMD", repo: "https://github.com/Luziferri/CMD" },
+      links: { demo: "https://github.com/Luziferri/CMD", repo: "https://luziferri.github.io/CMD/" },
       featured: false,
       icon: Terminal
     },
@@ -87,7 +87,7 @@ const PORTFOLIO_DATA = {
       description: "Aplicação web interativa do clássico jogo social. Lógica implementada em JavaScript puro para garantir leveza e rapidez.",
       tags: ["HTML", "JavaScript"],
       category: "Web Apps & Jogos",
-      links: { demo: "https://github.com/Luziferri/VerdadeConsequencia", repo: "https://github.com/Luziferri/VerdadeConsequencia" },
+      links: { demo: "https://github.com/Luziferri/VerdadeConsequencia", repo: " https://luziferri.github.io/VerdadeConsequencia/" },
       featured: false,
       icon: Gamepad2
     },
@@ -99,7 +99,7 @@ const PORTFOLIO_DATA = {
       descCipher: "R2VzdMOjbyBjb21wbGV0YSBkZSBjYXTrbG9nby4=",
       tags: ["ENCRYPTED"],
       category: "Web Apps & Jogos",
-      links: { demo: "https://github.com/Luziferri/Biblioteca", repo: "https://github.com/Luziferri/Biblioteca" },
+      links: { demo: "https://github.com/Luziferri/Biblioteca", repo: "https://luziferri.github.io/Biblioteca" },
       featured: true,
       icon: Book,
       locked: true
@@ -110,7 +110,7 @@ const PORTFOLIO_DATA = {
       description: "Experiência web focada em estrutura HTML semântica e acessibilidade, explorando layouts fluídos.",
       tags: ["HTML"],
       category: "Experimental",
-      links: { demo: "https://github.com/Luziferri/wavelength", repo: "https://github.com/Luziferri/wavelength" },
+      links: { demo: "https://github.com/Luziferri/wavelength", repo: "https://luziferri.github.io/wavelength" },
       featured: false,
       icon: Activity
     },
@@ -120,7 +120,7 @@ const PORTFOLIO_DATA = {
       description: "Página de aterragem (Landing Page) desenvolvida para sistemas de onboarding digital, com foco em clareza visual.",
       tags: ["HTML"],
       category: "Design & UI Kits",
-      links: { demo: "https://github.com/Luziferri/acolhimento", repo: "https://github.com/Luziferri/acolhimento" },
+      links: { demo: "https://github.com/Luziferri/acolhimento", repo: "https://luziferri.github.io/acolhimento" },
       featured: false,
       icon: Home
     },
@@ -130,7 +130,7 @@ const PORTFOLIO_DATA = {
       description: "Sistema de classificação e ranking. Uma implementação limpa focada na hierarquia de dados.",
       tags: ["HTML"],
       category: "Web Apps & Jogos",
-      links: { demo: "https://github.com/Luziferri/WC-Rank", repo: "https://github.com/Luziferri/WC-Rank" },
+      links: { demo: "https://github.com/Luziferri/WC-Rank", repo: "https://luziferri.github.io/WC-Rank" },
       featured: false,
       icon: Trophy
     },
@@ -142,7 +142,7 @@ const PORTFOLIO_DATA = {
       descCipher: "TWFuaXB1bGHDp8OjbyBkZSBEYXRhcw==",
       tags: ["ENCRYPTED"],
       category: "Experimental",
-      links: { demo: "https://github.com/Luziferri/date", repo: "https://github.com/Luziferri/date" },
+      links: { demo: "https://github.com/Luziferri/date", repo: "https://luziferri.github.io/date" },
       featured: false,
       icon: Calendar,
       locked: true
@@ -153,7 +153,7 @@ const PORTFOLIO_DATA = {
       description: "Versão anterior do portfólio pessoal. Mantido como arquivo da evolução estilística e técnica.",
       tags: ["HTML", "Open Source"],
       category: "Arquivo",
-      links: { demo: "https://github.com/Luziferri/portfolio", repo: "https://github.com/Luziferri/portfolio" },
+      links: { demo: "https://github.com/Luziferri/portfolio", repo: "https://luziferri.github.io/portfolio" },
       featured: false,
       icon: Layout
     },
@@ -163,7 +163,7 @@ const PORTFOLIO_DATA = {
       description: "Espaço visual para organização de inspirações, paletas de cores e referências de design. Uma ferramenta essencial para o processo criativo.",
       tags: ["React", "Tailwind"],
       category: "Design & UI Kits",
-      links: { demo: "https://github.com/Luziferri/moodboard", repo: "https://github.com/Luziferri/moodboard" },
+      links: { demo: "https://github.com/Luziferri/moodboard", repo: "https://luziferri.github.io/moodboard" },
       featured: false,
       icon: Sparkles
     }
@@ -482,7 +482,7 @@ const Hero = ({ onViewChange }) => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
             </span>
-            Available for hire
+            Desempregado Premium Plus
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6">
