@@ -62,6 +62,19 @@ const PORTFOLIO_DATA = {
   },
   projects: [
     {
+      id: 11,
+      title: "Poké Idle",
+      description: "Uma extensão de navegador que traz a experiência idle de Pokémon diretamente para o seu Chrome. Capture, evolua e suba de nível enquanto navega na web.",
+      tags: ["JavaScript", "Chrome Extension", "CSS"],
+      category: "Web Apps & Jogos",
+      links: { 
+        repo: "https://github.com/Luziferri", 
+        demo: "https://chromewebstore.google.com/detail/pok%C3%A9-idle/palkkgkdplpcnlnjmebaihbjgmijooon" 
+      },
+      featured: true, 
+      icon: Gamepad2
+    },
+    {
       id: 1,
       title: "BetterDiscordStuff",
       description: "Coleção de plugins e temas personalizados para o BetterDiscord. Melhora a experiência do utilizador com funcionalidades extra e estilos visuais únicos.",
@@ -166,20 +179,7 @@ const PORTFOLIO_DATA = {
       links: { demo: "https://moodboard-six.vercel.app/", repo: "https://moodboard-six.vercel.app/" },
       featured: false,
       icon: Sparkles
-    },
-    {
-      id: 11, // Novo ID único
-      title: "Poké Idle",
-      description: "Uma extensão de navegador que traz a experiência idle de Pokémon diretamente para o seu Chrome. Capture, evolua e suba de nível enquanto navega na web.",
-      tags: ["JavaScript", "Chrome Extension", "CSS"],
-      category: "Web Apps & Jogos",
-      links: { 
-        repo: "https://github.com/Luziferri", // Link do repo se tiver, ou mantenha o do Github
-        demo: "https://chromewebstore.google.com/detail/pok%C3%A9-idle/palkkgkdplpcnlnjmebaihbjgmijooon" 
-      },
-      featured: true, // Coloquei como true para aparecer na Home!
-      icon: Gamepad2
-    },
+    }
   ]
 };
 
@@ -749,7 +749,7 @@ const HomePage = ({ onViewChange, unlockedProjects, onUnlockRequest, sessionKey 
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {PORTFOLIO_DATA.projects.filter(p => p.featured).slice(0, 3).map((project) => {
+      {PORTFOLIO_DATA.projects.filter(p => p.featured).map((project) => {
           const Icon = project.icon || Code2;
           const isLocked = project.locked && !unlockedProjects.includes(project.id);
 
